@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nexus:
+    image: "sonatype/nexus3"
+    ports:
+      - 10680:8081
+    container_name: nexus
+    volumes:
+      - /root/nexus:/nexus-data
+      - /var/run/docker.sock:/var/run/docker.sock
